@@ -346,6 +346,7 @@ class MeliUtil(models.AbstractModel):
 
 
             else:
+                _logger.error("NO SE CONECTO DE TODOS*********")
                 api_rest_client.needlogin_state = True
 
             #        except requests.exceptions.HTTPError as e:
