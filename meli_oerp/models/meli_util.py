@@ -269,6 +269,7 @@ class MeliUtil(models.AbstractModel):
         #pdb.set_trace()
         try:
             if not (company.mercadolibre_seller_id==False) and api_rest_client.access_token!='':
+                _logger.error("Datos de mercado libre*****"+api_rest_client.access_token)
                 response = api_rest_client.get("/users/"+str(company.mercadolibre_seller_id), {'access_token':api_rest_client.access_token} )
 
                 #_logger.info("get_new_instance connection response:"+str(response))
